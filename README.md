@@ -109,7 +109,14 @@ composer install
 Start Docker containers:
 ```
 docker-compose up -d
+```
+## Getting Started
+```bash
+# Install dependencies
+composer install
 
+# Start the development server
+symfony serve
 ``` 
 Run database migrations:
 ```
