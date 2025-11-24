@@ -1,0 +1,98 @@
+
+###> symfony/framework-bundle ###
+/.env.local
+/.env.local.php
+/.env.*.local
+/config/secrets/prod/prod.decrypt.private.php
+/public/bundles/
+/var/
+/vendor/
+###< symfony/framework-bundle ###
+
+# ----------------------------------------
+# Symfony / PHP
+# ----------------------------------------
+/vendor/
+/var/
+/var/*
+!/var/.gitkeep
+
+# Symfony cache & logs
+var/cache/
+var/log/
+
+# Local environment files
+.env.local
+.env.*.local
+/.env.local.php
+
+# Ignore secrets (Symfony Vault)
+config/secrets/*/decrypt.private.php
+config/secrets/*/decrypt.private.key
+config/secrets/*/encrypt.public.php
+
+# Generated bootstrap files
+config/preload.php
+public/bundles/
+
+# Ignore Symfony profiler data
+.profiler/
+
+# ----------------------------------------
+# Composer
+# ----------------------------------------
+composer.phar
+
+# ----------------------------------------
+# Docker / Containers
+# ----------------------------------------
+/docker/php/php.ini
+/docker/php/var/
+/docker/php/log/
+/docker/mysql/*
+*.pid
+*.seed
+*.bak
+docker-compose.override.yml
+/.docker/
+/.docker/*
+/docker-data/
+/docker/mysql-data/
+/docker/logs/
+.env.docker
+
+# ----------------------------------------
+# IDE / Project Files
+# ----------------------------------------
+# PhpStorm
+.idea/
+*.iml
+
+# VSCode
+.vscode/
+.history/
+
+# ----------------------------------------
+# Tests / Coverage
+# ----------------------------------------
+/coverage/
+/phpunit.result.cache
+
+# ----------------------------------------
+# Node / Yarn (if you add JS tooling later)
+# ----------------------------------------
+node_modules/
+npm-debug.log*
+yarn-error.log*
+/public/build/
+
+# ----------------------------------------
+# Misc
+# ----------------------------------------
+.DS_Store
+Thumbs.db
+*.cache
+*.log
+*.swp
+*.swo
+*.tmp
