@@ -115,101 +115,7 @@ Run database migrations:
 ```
 php bin/console doctrine:migrations:migrate
 ```
-# API Documentation
-
-### Create User — POST /api/users
-
-**Request Body**
-```json
-{
-  "name": "John Doe"
-}
-```
-
-**cURL**
-```bash
-curl -X POST http://localhost/api/users \
-  -H "Content-Type: application/json" \
-  -d '{"name":"John Doe"}'
-```
-
-**Response**
-```json
-{
-  "id": 1,
-  "name": "John Doe"
-}
-```
-
-### Get All Users — GET /api/users
-
-**cURL**
-```bash
-curl http://localhost/api/users
-```
-
-**Response**
-```json
-[
-  {
-    "id": 1,
-    "name": "John Doe"
-  }
-]
-```
-
-### Get Single User — GET /api/users/{id}
-
-**cURL**
-```bash
-curl http://localhost/api/users/1
-```
-
-**Response**
-```json
-{
-  "id": 1,
-  "name": "John Doe"
-}
-```
-
-### Update User — PUT /api/users/{id}
-
-**Request Body**
-```json
-{
-  "name": "Updated Name"
-}
-```
-
-**cURL**
-```bash
-curl -X PUT http://localhost/api/users/1 \
-  -H "Content-Type: application/json" \
-  -d '{"name":"Updated Name"}'
-```
-
-**Response**
-```json
-{
-  "id": 1,
-  "name": "Updated Name"
-}
-```
-
-### Delete User — DELETE /api/users/{id}
-
-**cURL**
-```bash
-curl -X DELETE http://localhost/api/users/1
-```
-
-**Response**
-```json
-{
-  "message": "User deleted successfully"
-}
-```
+## 8. API Documentation
 
 ## API Endpoints Summary
 
@@ -220,3 +126,111 @@ curl -X DELETE http://localhost/api/users/1
 | GET | /api/users/{id} | Get single user |
 | PUT | /api/users/{id} | Update user |
 | DELETE | /api/users/{id} | Delete user |
+
+## API Demo
+
+### Create User — POST /api/users
+
+**Request Body**
+```json
+{
+  "name": "Ganesh Rawool"
+}
+```
+
+**cURL**
+```bash
+curl -X POST http://localhost:8000/api/users \
+  -H "Content-Type: application/json" \
+  -d '{"name":"Ganesh Rawool"}'
+```
+
+**Response**
+```json
+{
+  "message": "User created",
+  "id": 6
+}
+```
+
+### Get All Users — GET /api/users
+
+**cURL**
+```bash
+curl http://localhost:8000/api/users
+```
+
+**Response**
+```json
+[
+  {
+    "id": 1,
+    "name": "Ganesh Rawool"
+  },
+  {
+    "id": 2,
+    "name": "Virat Kohli"
+  },
+  {
+    "id": 3,
+    "name": "Bipin Rawool"
+  },
+  {
+    "id": 6,
+    "name": "Ganesh Rawool"
+  }
+]
+```
+
+### Get Single User — GET /api/users/{id}
+
+**cURL**
+```bash
+curl http://localhost:8000/api/users/5
+```
+
+**Response**
+```json
+{
+  "id": 5,
+  "name": "John Doe"
+}
+```
+
+### Update User — PUT /api/users/{id}
+
+**Request Body**
+```json
+{
+  "name": "John look"
+}
+```
+
+**cURL**
+```bash
+curl -X PUT http://localhost:8000/api/users/5 \
+  -H "Content-Type: application/json" \
+  -d '{"name":"John look"}'
+```
+
+**Response**
+```json
+{
+  "message": "User updated",
+  "id": 5
+}
+```
+
+### Delete User — DELETE /api/users/{id}
+
+**cURL**
+```bash
+curl -X DELETE http://localhost:8000/api/users/5
+```
+
+**Response**
+```json
+{
+  "message": "User deleted"
+}
+```
